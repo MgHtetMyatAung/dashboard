@@ -1,5 +1,6 @@
 import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import { Bell, MessageCircle } from "lucide-react";
+import { ProfileBtn } from "./ProfileBtn";
 
 export default function DashboardMenu({ title }: { title?: string }) {
   const { isMobile } = useSidebar();
@@ -13,7 +14,7 @@ export default function DashboardMenu({ title }: { title?: string }) {
           </h3>
         ) : null}
       </div>
-      <ul className=" flex gap-3">
+      <ul className=" flex gap-5">
         <li>
           <MenuIconBox className=" relative">
             <span className=" grid place-items-center w-6 h-6 text-sm bg-green-200 absolute -top-2 -right-2 rounded-full">
@@ -26,6 +27,9 @@ export default function DashboardMenu({ title }: { title?: string }) {
           <MenuIconBox>
             <MessageCircle size={18} />
           </MenuIconBox>
+        </li>
+        <li>
+          <ProfileBtn />
         </li>
       </ul>
     </nav>
