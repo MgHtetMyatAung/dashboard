@@ -1,5 +1,6 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "./sidebar/AppSideBar";
+import DashboardMenu from "./menu/DashboardMenu";
 
 export default function DashboardLayout({
   children,
@@ -9,9 +10,11 @@ export default function DashboardLayout({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
+      <main className=" w-full relative scroll-bar-fit">
+        <DashboardMenu />
+        <div className=" p-5 bg-secondary-gray w-full h-full">
+          <div className="">{children}</div>
+        </div>
       </main>
     </SidebarProvider>
   );

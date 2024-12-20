@@ -7,65 +7,48 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-
-// Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-];
+import SideBarHeading from "./side-bar-heading";
+import {
+  applicationMenuItems,
+  controlMenuItems,
+  supportMenuItems,
+} from "./data";
+import TopLevelMenu from "./top-level-menu";
 
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <SidebarMenuButton
-          size="lg"
-          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
-        >
-          <p>hello</p>
-        </SidebarMenuButton>
+        <SideBarHeading title="Innovix Digital" />
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className=" scroll-bar-fit">
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
+              {applicationMenuItems.map((item) => (
+                <TopLevelMenu items={item} key={item.title} />
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Control</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {controlMenuItems.map((item) => (
+                <TopLevelMenu items={item} key={item.title} />
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Support</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {supportMenuItems.map((item) => (
+                <TopLevelMenu items={item} key={item.title} />
               ))}
             </SidebarMenu>
           </SidebarGroupContent>

@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  border-color: #e5e7eb !important;
+}
+
+.scroll-bar-fit::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scroll-bar-fit::-webkit-scrollbar-thumb {
+  background: #d5d6d8;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #959696;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -138,7 +158,6 @@ button:focus-visible {
 
 @layer base {
   :root {
-
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -153,10 +172,9 @@ button:focus-visible {
 
     --sidebar-border: 220 13% 91%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-
     --sidebar-background: 240 5.9% 10%;
 
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -171,7 +189,7 @@ button:focus-visible {
 
     --sidebar-border: 240 3.7% 15.9%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
