@@ -22,11 +22,11 @@ export function AppSidebar() {
       <SidebarHeader>
         <SideBarHeading title="Innovix Digital" />
       </SidebarHeader>
-      <SidebarContent className=" scroll-bar-fit">
+      <SidebarContent className=" scroll-bar-fit gap-0">
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className=" gap-0">
               {applicationMenuItems.map((item) => (
                 <TopLevelMenu items={item} key={item.title} />
               ))}
@@ -36,7 +36,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Control</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className=" gap-0">
               {controlMenuItems.map((item) => (
                 <TopLevelMenu items={item} key={item.title} />
               ))}
@@ -46,7 +46,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Support</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className=" gap-0">
               {supportMenuItems.map((item) => (
                 <TopLevelMenu items={item} key={item.title} />
               ))}

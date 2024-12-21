@@ -22,7 +22,7 @@ export default function TopLevelMenu({ items }: { items: any }) {
         <SidebarMenuButton asChild tooltip={items.title} className=" py-5">
           <a href={items.url}>
             <items.icon />
-            <span>{items.title}</span>
+            <span className=" font-medium">{items.title}</span>
           </a>
         </SidebarMenuButton>
       </SidebarMenuItem>
@@ -39,7 +39,7 @@ export default function TopLevelMenu({ items }: { items: any }) {
           <CollapsibleTrigger asChild>
             <SidebarMenuButton tooltip={items.title} className="py-5">
               {items?.icon && <items.icon />}
-              <span>{items.title}</span>
+              <span className=" font-medium">{items.title}</span>
               <ChevronRight
                 className={cn(
                   "ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"

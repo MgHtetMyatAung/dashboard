@@ -17,7 +17,7 @@ export default function DashboardMenu({ title }: { title?: string }) {
       <ul className=" flex gap-5">
         <li>
           <MenuIconBox className=" relative">
-            <span className=" grid place-items-center w-6 h-6 text-sm bg-green-200 absolute -top-2 -right-2 rounded-full">
+            <span className=" grid place-items-center w-6 h-6 text-sm bg-secondary-green absolute -top-2 -right-2 rounded-full">
               19
             </span>
             <Bell size={18} />
